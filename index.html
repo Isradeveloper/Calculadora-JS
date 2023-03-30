@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Isra Trujillo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body class="vh-100 vw-100">
+    <main class="container-fluid h-100 d-flex justify-content-center align-items-center">
+      <div id="calculadora">
+
+        <div id="screen"></div>
+
+        <button class="btn-calc rojo" onclick="limpiar()">
+          <span class="material-symbols-outlined">
+            autorenew
+          </span>
+        </button>
+        <button class="btn-calc rojo" onclick="eliminar()">
+          <span class="material-symbols-outlined">
+            backspace
+          </span>        
+        </button>
+        <button class="btn-calc rosa" onclick="agregarCaracter(caracter='*')">X</button>
+        <button class="btn-calc rosa" onclick="agregarCaracter(caracter='/')">÷</button>
+
+        <button class="btn-calc azul" onclick="agregarCaracter(7)">7</button>
+        <button class="btn-calc azul" onclick="agregarCaracter(8)">8</button>
+        <button class="btn-calc azul" onclick="agregarCaracter(9)">9</button>
+        <button class="btn-calc rosa" onclick="agregarCaracter(caracter='-')">-</button>
+
+        <button class="btn-calc azul" onclick="agregarCaracter(4)">4</button>
+        <button class="btn-calc azul" onclick="agregarCaracter(5)">5</button>
+        <button class="btn-calc azul" onclick="agregarCaracter(6)">6</button>
+        <button class="btn-calc rosa" onclick="agregarCaracter(caracter='+')">+</button>
+
+        <button class="btn-calc azul" onclick="agregarCaracter(1)">1</button>
+        <button class="btn-calc azul" onclick="agregarCaracter(2)">2</button>
+        <button class="btn-calc azul" onclick="agregarCaracter(3)">3</button>
+        <button class="btn-calc verde" onclick="calcular()">=</button>
+
+        <button class="btn-calc rosa" onclick="agregarCaracter(caracter='(')">(</button>
+        <button class="btn-calc azul" onclick="agregarCaracter(0)">0</button>
+        <button class="btn-calc rosa" onclick="agregarCaracter(caracter=')')">)</button>
+        <button class="btn-calc rosa" onclick="agregarCaracter(caracter='.')">.</button>
+
+      </div>
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="static/js/index.js"></script>
+  </body>
+</html>
