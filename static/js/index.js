@@ -1,6 +1,22 @@
 agregarCaracter = (caracter) => {
   const texto = document.querySelector('#screen')
-  texto.innerHTML += caracter
+  const operadores =['*','+','-','/']
+  
+  const array = Array.from(texto.innerHTML)
+  const ultimo = array.at(-1)
+
+  if (operadores.includes(ultimo)){
+    //validar que el ultimo sea numero
+      if(operadores.includes(caracter)){
+        texto.innerHTML = texto.innerHTML.slice(0,-1)
+        texto.innerHTML += caracter
+      }else{
+        texto.innerHTML += caracter
+      }
+  } else {
+    console.log('aqui');
+    texto.innerHTML += caracter
+  }
 }
 
 calcular = () => {
